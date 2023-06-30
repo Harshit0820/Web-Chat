@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Chat</title>
+    <link rel="icon" href="chat.png">
+    <script src="https://kit.fontawesome.com/91061bf718.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <img src="logo.png" class="logo" alt="Web chat logo">
+            <div class="navbar-links">
+                <div class="nav-links"><img src="images/nav-home.png" alt="home icon"><a href="index.html">Home</a></div>
+                <div class="nav-links"><img src="images/nav-notification.png" alt="notification icon"><button id="open-chat-btn">Notifications</button></div>
+                <div class="nav-links"><img src="images/nav-video.png" alt="notification icon"><a href="#">Video</a></div>
+            </div>
+            
+        </div>
+        <div class="nav-right">
+            <div class="search-box">
+                <img src="images/search.png" alt="search icon">
+                <input id="inputBox" class="input-box" type="text" placeholder="Search">
+            </div>
+            <div class="nav-user-icon online" onclick="settingsmenutoggle()">
+                <img src="images/profile pic.jpg" alt="profile pic">
+            </div>
+        </div>
+
+        <!-- settings menu -->
+        
+        <div class="settings-menu">
+
+            <div id="dark-btn">
+                <span></span>
+            </div>
+
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="images/profile pic.jpg" alt="profile pic">
+                    <div>
+                        <p>Nick Johnson</p>
+                        <a href="profile.html">See your profile</a>
+                    </div>
+                </div>
+                <div class="settings-links">
+                    <img src="images/setting.png" class="settings-icon" alt="settings">
+                    <a href="#">Settings & Privacy <img class="setting-icon" src="images/setting-arrow.png" width="10px" alt="arrow"></a>
+                </div>
+                <div class="settings-links">
+                    <img src="images/setting-help.png" class="settings-icon" alt="help">
+                    <a href="#">Help & Support <img class="setting-icon" src="images/setting-arrow.png" width="10px" alt="arrow"></a>
+                </div>  
+                <div class="settings-links">
+                    <img src="images/setting-display.png" class="settings-icon" alt="display">
+                    <a href="#">Display & Accessiblity <img class="setting-icon" src="images/setting-arrow.png" width="10px" alt="arrow"></a>
+                </div>
+                <div class="settings-links">
+                    <img src="images/setting-logout.png" class="settings-icon" alt="settings">
+                    <a href="#">Logout <img class="setting-icon" src="images/setting-arrow.png" width="10px" alt="arrow"></a>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+    
+
+    <div class="container">
+        <!-- Left SideBar -->
+        <div id="leftSidebar" class="left-sidebar">
+            <div class="shortcut-links">
+                <p>Your Shortcuts</p>
+                <a href="#"><img src="images/shortcut web developers.jpg" alt="business shortcut"> Web Developers</a>
+                <a href="#"><img src="images/shortcut business advisor.jpg" alt="business shortcut"> Business Advisor</a>
+                <a href="#"><img src="images/shortcut digital marketing.jpg" alt="business shortcut"> Digital Marketing</a>
+                <a href="#"><img src="images/shortcut gaming.jpg" alt="business shortcut"> Gaming</a>
+            </div>
+            <div class="imp-links">
+                <p>Feed</p>
+                <a href="#"><img src="images/news.png" alt="news icon"> Latest News</a>
+                <a href="#"><img src="images/friends.png" alt="news icon"> Friends</a>
+                <a href="#"><img src="images/group.png" alt="news icon"> Groups</a>
+                <a href="#"><img src="images/marketplace.png" alt="news icon"> Shop</a>
+                <a href="#"><img src="images/watch.png" alt="news icon"> Watch</a>
+                <a href="#">Show More</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            
+            <div class="story-gallery">
+                <div class="story story1">
+                    <img src="images/upload.png" alt="upload icon">
+                    <p>Post Story</p>
+                </div>
+                <div class="story story2">
+                    <p>Jane Warner</p>
+                </div>
+                <div class="story story3">
+                    <p>Jen Lawrence</p>
+                </div>
+                <div class="story story4">
+                    <p>Angela Greene</p>
+                </div>
+                <div class="story story5">
+                    <p>David Jackson</p>
+                </div>
+            </div>
+
+            <div id="writePost" class="write-post-container">
+                <div class="user-profile">
+                    <img src="images/profile pic.jpg" alt="profile pic">
+                    <div>
+                        <p>Nick Johnson</p>
+                        <small>Public <i class="fa-solid fa-caret-down" style="cursor: pointer;"></i></small>
+
+                    </div>
+                </div>
+
+                <div class="post-input-container">
+                    <textarea class="textArea" id="postArea" rows="3" placeholder="What's on your mind, Nick ?"></textarea>
+
+                    <div class="add-post-links">
+                        <a href="#"><img src="images/write-live-video.png" alt="video post icon">Live Video</a>
+                        <a href="#"><img src="images/write-photo.png" alt="video post icon">Photo/Video</a>
+                        <a href="#"><img src="images/write-feeling.png" alt="video post icon">Feeling/Activity</a>
+                    </div>
+                    <div class="upload-button-container">
+                        <button type="button" id="uploadButton" class="upload-button">Upload</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="photo-post-container">
+                <div class="user-profile">
+                    <img src="images/post profile 1.jpg" alt="profile pic">
+                    <div class="user-post-info">
+                        <div class="username">
+                            <p style="margin-bottom: 0px;">Nick Johnson</p>
+                            <a href="#"><i class="fa-solid fa-ellipsis fa-xl" style="color: #478184;"></i></a>
+                        </div>
+                        <div class="photo-post-date-time">
+                            <span>05:10 PM</span>
+                            <span>June 27th, 2023</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="photo-caption">This site is made using <span>HTML, CSS and JavaScript.</span> 
+                    I love doing <span>Web development.</span>
+                    <a href="#">#WebDevelopment</a>
+                </p>
+
+                <img src="images/post 1.jpg" class="post-img" alt="post image">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png" alt="like icon"> 150</div>
+                        <div><img src="images/comment.png" alt="like icon"> 35</div>
+                        <div><img src="images/share.png" alt="like icon"> 15</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-post-container">
+                <div class="user-profile">
+                    <img src="images/post profile 2.jpg" alt="profile pic">
+                    <div class="user-post-info">
+                        <div class="username">
+                            <p style="margin-bottom: 0px;">Jane Warner</p>
+                            <a href="#"><i class="fa-solid fa-ellipsis fa-xl" style="color: #478184;"></i></a>
+                        </div>
+                        <div class="photo-post-date-time">
+                            <span>03:15 PM</span>
+                            <span>June 16th, 2023</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="photo-caption">Good View and Success always comes after <span>Hardwork.</span>
+                    <a href="#">#Hardworking</a>
+                    <a href="#">#Trekking</a>
+                </p>
+
+                <img src="images/post 2.jpg" class="post-img" alt="post image">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png" alt="like icon"> 258</div>
+                        <div><img src="images/comment.png" alt="like icon"> 85</div>
+                        <div><img src="images/share.png" alt="like icon"> 50</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-post-container">
+                <div class="user-profile">
+                    <img src="images/post profile 3.jpg" alt="profile pic">
+                    <div class="user-post-info">
+                        <div class="username">
+                            <p style="margin-bottom: 0px;">Jen Lawrence</p>
+                            <a href="#"><i class="fa-solid fa-ellipsis fa-xl" style="color: #478184;"></i></a>
+                        </div>
+                        <div class="photo-post-date-time">
+                            <span>02:30 AM</span>
+                            <span>June 12th, 2023</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="photo-caption">Great Friends are the real <span>Treasures</span> of life.
+                    <a href="#">#Friendship</a>
+                </p>
+
+                <img src="images/post 3.jpg" class="post-img" alt="post image">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png" alt="like icon"> 92</div>
+                        <div><img src="images/comment.png" alt="like icon"> 10</div>
+                        <div><img src="images/share.png" alt="like icon"> 5</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-post-container">
+                <div class="user-profile">
+                    <img src="images/post profile 4.jpg" alt="profile pic">
+                    <div class="user-post-info">
+                        <div class="username">
+                            <p style="margin-bottom: 0px;">Angela Greene</p>
+                            <a href="#"><i class="fa-solid fa-ellipsis fa-xl" style="color: #478184;"></i></a>
+                        </div>
+                        <div class="photo-post-date-time">
+                            <span>12:30 PM</span>
+                            <span>May 10th, 2023</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="photo-caption"><span>Laughter</span> and <span>Walking</span> are the best stress busters.
+                    <a href="#">#LaughOutLoud</a>
+                    <a href="#">#LOL</a>
+                </p>
+
+                <img src="images/post 4.jpg" class="post-img" alt="post image">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like-white.png" alt="like icon"> 106</div>
+                        <div><img src="images/comment.png" alt="like icon"> 45</div>
+                        <div><img src="images/share.png" alt="like icon"> 13</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-post-container">
+                <div class="user-profile">
+                    <img src="images/post profile 5.jpg" alt="profile pic">
+                    <div class="user-post-info">
+                        <div class="username">
+                            <p style="margin-bottom: 0px;">Josh Wilson</p>
+                            <a href="#"><i class="fa-solid fa-ellipsis fa-xl" style="color: #478184;"></i></a>
+                        </div>
+                        <div class="photo-post-date-time">
+                            <span>05:27 AM</span>
+                            <span>May 01st, 2023</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="photo-caption">I'm fascinated by beautiful scenery and what we have here on this Earth.
+                    <a href="#">#Photography</a>
+                    <a href="#">#Scenery</a>
+                </p>
+
+                <img src="images/post 5.jpg" class="post-img" alt="post image">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png" alt="like icon"> 219</div>
+                        <div><img src="images/comment.png" alt="like icon"> 68</div>
+                        <div><img src="images/share.png" alt="like icon"> 24</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-post-container">
+                <div class="user-profile">
+                    <img src="images/post profile 6.png" alt="profile pic">
+                    <div class="user-post-info">
+                        <div class="username">
+                            <p style="margin-bottom: 0px;">Jane Stewart</p>
+                            <a href="#"><i class="fa-solid fa-ellipsis fa-xl" style="color: #478184;"></i></a>
+                        </div>
+                        <div class="photo-post-date-time">
+                            <span>06:15 PM</span>
+                            <span>April 26th, 2023</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="photo-caption">Little Bonfire at the beach.
+                </p>
+
+                <img src="images/post 6.png" class="post-img" alt="post image">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like-white.png" alt="like icon"> 56</div>
+                        <div><img src="images/comment.png" alt="like icon"> 14</div>
+                        <div><img src="images/share.png" alt="like icon"> 5</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-post-container">
+                <div class="user-profile">
+                    <img src="images/post profile 7.jpg" alt="profile pic">
+                    <div class="user-post-info">
+                        <div class="username">
+                            <p style="margin-bottom: 0px;">Carl Peterson</p>
+                            <a href="#"><i class="fa-solid fa-ellipsis fa-xl" style="color: #478184;"></i></a>
+                        </div>
+                        <div class="photo-post-date-time">
+                            <span>04:30 PM</span>
+                            <span>April 20th, 2023</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="photo-caption">Team Discussion is very necessary for the success of business and projects.
+                </p>
+
+                <img src="images/post 7.png" class="post-img" alt="post image">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png" alt="like icon"> 84</div>
+                        <div><img src="images/comment.png" alt="like icon"> 25</div>
+                        <div><img src="images/share.png" alt="like icon"> 12</div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="load-more-button">Load More</button>
+
+            <div class="footer">
+                <p><i class="fa-regular fa-copyright"></i> Copyright 2023 - Harshit Bhatia</p>
+            </div>
+
+        </div>
+
+        <!-- Right SideBar -->
+        <div id="rightSidebar" class="right-sidebar">
+            <div class="sidebar-title">
+                <h4>Upcoming Events</h4>
+                <a href="#">See All</a>
+            </div>
+
+            <div class="event-list">
+                <div class="event">
+                    <div class="left-event">
+                        <h3>Date: <span style="font-weight: 400;">03rd</span><span class="month">March, 2023</span></h3>
+                    </div>
+                    <div class="right-event">
+                        <h3>Event: <span style="font-weight: 500;">Martin Garrix DJ Night</span></h3>
+                        <p><span style="font-weight: 600;">Venue:</span> BoomBox, Bangalore</p>
+                        <a href="#">More Info</a>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="left-event">
+                        <h3>Date: <span style="font-weight: 400;">22nd</span><span class="month">April, 2023</span></h3>
+                    </div>
+                    <div class="right-event">
+                        <h3>Event: <span style="font-weight: 500;">YouTube Fan Fest</span></h3>
+                        <p><span style="font-weight: 600;">Venue:</span> Jio Garden, Mumbai</p>
+                        <a href="#">More Info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advertisement">
+                <div class="sidebar-title">
+                    <h4>Advertisement</h4>
+                    <a href="#">Close</a>
+                </div>
+                <img src="images/advertisement.png" alt="ad" class="sidebar-ads">
+            </div>
+
+            <div class="coversations">
+                <div class="sidebar-title">
+                    <h4>Conversations</h4>
+                    <a href="#">Hide Chat</a>
+                </div>
+
+                <div class="chat-list">
+                    <div class="online-list">
+                        <div class="online">
+                            <img src="images/member-1.png" alt="member-1">
+                        </div>
+                        <p>Jane Stewart</p>
+                    </div>
+                    <div class="online-list">
+                        <div class="online">
+                            <img src="images/member-2.png" alt="member-1">
+                        </div>
+                        <p>David Scott</p>
+                    </div>
+                    <div class="online-list">
+                        <div class="online">
+                            <img src="images/member-3.png" alt="member-1">
+                        </div>
+                        <p>Alison Parker</p>
+                    </div>
+                    <div class="online-list">
+                        <div class="online">
+                            <img src="images/member-4.png" alt="member-1">
+                        </div>
+                        <p>Andrew Jones</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="notification-container" class="notification-container">
+        <div id="notif-header" class="notif-header">
+            <h2>Notifications</h2>
+            <button id="close-chat-btn"><i class="fa-sharp fa-solid fa-square-xmark fa-2xl" style="color: #cb3131;"></i></button>
+        </div>
+        <div class="message-list">
+            <div class="message">
+                <div class="online">
+                    <img src="images/member-1.png" alt="member-1">
+                </div>
+                <div class="message-content">
+                    <h3>Jane Stewart</h3>
+                    <p>Hey, how are you doing?</p>
+                </div>
+            </div>
+            <div class="message">
+                <div class="online">
+                    <img src="images/member-3.png" alt="member-1">
+                </div>
+                <div class="message-content">
+                    <h3>Alison Parker</h3>
+                    <p>Wanna grab coffee ?</p>
+                </div>
+            </div>
+            <div class="message">
+                <div class="notif-img">
+                    <img src="images/post profile 3.jpg" alt="member-1">
+                </div>
+                <div class="message-content">
+                    <h3>Jen Lawrence</h3>
+                    <p>Did you finished the task ?</p>
+                </div>
+            </div>
+            <div class="message">
+                <div class="notif-img">
+                    <img src="images/post profile 5.jpg" alt="member-1">
+                </div>
+                <div class="message-content">
+                    <h3>Josh Wilson</h3>
+                    <p>Did you checked my new Scenery photo ?</p>
+                </div>
+            </div>
+            <div class="message">
+                <div class="online">
+                    <img src="images/member-4.png" alt="member-1">
+                </div>
+                <div class="message-content">
+                    <h3>Andrew Jones</h3>
+                    <p>Sent you the email.</p>
+                </div>
+            </div>
+            <div class="message">
+                <div class="notif-img">
+                    <img src="images/post profile 2.jpg" alt="member-1">
+                </div>
+                <div class="message-content">
+                    <h3>Jane Warner</h3>
+                    <p>I got a raise. yay!</p>
+                </div>
+            </div>
+            <div class="message">
+                <div class="online">
+                    <img src="images/member-2.png" alt="member-1">
+                </div>
+                <div class="message-content">
+                    <h3>David Scott</h3>
+                    <p>Going for trekking this weekend.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- understand important -->
+    <script src="script.js"> </script>
+
+</body>
+</html>
